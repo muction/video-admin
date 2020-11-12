@@ -16,7 +16,7 @@ class VideoAdminProvider extends ServiceProvider
      * @var array
      */
     protected $commands = [
-
+        \Video\Admin\Console\Command\SyncDatabaseCommand::class
     ];
 
     /**
@@ -24,7 +24,7 @@ class VideoAdminProvider extends ServiceProvider
      * @var array
      */
     protected $routeMiddleware = [
-        'video.admin.auth' => Middleware\VideoLiveMiddleware::class
+        'video.admin.auth' => Middleware\VideoAdminMiddleware::class
     ];
 
     /**
